@@ -23,7 +23,6 @@ jobs:
         envkey_DB_USER: ${{ secrets.DB_USER }}
         envkey_DB_PASS: ${{ secrets.DB_PASS }}
         envkey_DB_NAME: ${{ secrets.DB_NAME }}
-        file_name: .env
 
     - name: Check Out Repo 
       uses: actions/checkout@v2
