@@ -17,14 +17,14 @@ jobs:
     steps:
     - name: Create .env file
       run: |
-        echo SERVICE_NAME="note-app" > .env
-        echo DB_NAME=${{ secrets.DB_NAME}} >> .env
-        echo DB_PASS=${{ secrets.DB_PASS}} >> .env
-        echo DB_USER=${{ secrets.DB_USER}} >> .env
-        echo DB_HOST=${{ secrets.DB_HOST}} >> .env
+        echo SERVICE_NAME="note-app" > /home/node/app/.env
+        echo DB_NAME=${{ secrets.DB_NAME}} >> /home/node/app/.env
+        echo DB_PASS=${{ secrets.DB_PASS}} >> /home/node/app/.env
+        echo DB_USER=${{ secrets.DB_USER}} >> /home/node/app/.env
+        echo DB_HOST=${{ secrets.DB_HOST}} >> /home/node/app/.env
     
     - name: Check the file
-      run: ls -la
+      run: ls /home/node/app -la
 
     - name: Check Out Repo 
       uses: actions/checkout@v2
